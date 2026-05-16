@@ -8,4 +8,5 @@ build/
 *.log
 coverage/
 screenshots/*.tmp
-
+.postman/
+postman/
