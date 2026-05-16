@@ -26,6 +26,16 @@ import { getPriorityNotifications, logFrontend } from "./api.js";
 const TYPES = ["All", "Placement", "Result", "Event"];
 const LIMITS = [10, 15, 20];
 
+function getInitialLimit() {
+  const requestedLimit = Number(new URLSearchParams(window.location.search).get("limit"));
+  return LIMITS.includes(requestedLimit) ? requestedLimit : 10;
+}
+
+function getInitialType() {
+  const requestedType = new URLSearchParams(window.location.search).get("type");
+  return TYPES.includes(requestedType) ? requestedType : "All";
+}
+
 function formatTimestamp(value) {
   return new Intl.DateTimeFormat("en-IN", {
     dateStyle: "medium",
@@ -69,8 +79,8 @@ function NotificationCard({ notification }) {
 }
 
 export default function App() {
-  const [limit, setLimit] = useState(10);
-  const [type, setType] = useState("All");
+  const [limit, setLimit] = useState(getInitialLimit);
+  const [type, setType] = useState(getInitialType);
   const [notifications, setNotifications] = useState([]);
   const [source, setSource] = useState("");
   const [loading, setLoading] = useState(true);
@@ -212,4 +222,3 @@ export default function App() {
     </Box>
   );
 }
-
