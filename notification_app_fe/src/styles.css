@@ -1,0 +1,105 @@
+html {
+  min-width: 320px;
+}
+
+body {
+  margin: 0;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, rgba(37, 87, 167, 0.08), rgba(246, 248, 251, 0) 320px),
+    #f6f8fb;
+}
+
+.topbar {
+  border-bottom: 1px solid #d9e0ea;
+}
+
+.topbar .MuiToolbar-root {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  min-width: 0;
+}
+
+.content {
+  padding-top: 32px;
+  padding-bottom: 48px;
+}
+
+.subtitle {
+  margin-top: 8px;
+}
+
+.metric,
+.controls,
+.notification-card,
+.empty-state {
+  border: 1px solid #d9e0ea;
+}
+
+.metric {
+  padding: 20px;
+  min-height: 118px;
+}
+
+.controls {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  align-items: center;
+}
+
+.controls .MuiFormControl-root {
+  min-width: 170px;
+}
+
+.notification-card {
+  padding: 18px;
+  min-height: 168px;
+}
+
+.score {
+  color: #7a3e00;
+  background: #fff4df;
+  border: 1px solid #ffd58c;
+  border-radius: 999px;
+  padding: 3px 8px;
+}
+
+.loading,
+.empty-state {
+  min-height: 180px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 24px;
+}
+
+@media (max-width: 640px) {
+  .topbar .MuiToolbar-root {
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .content {
+    padding-top: 24px;
+  }
+
+  .controls {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .controls .MuiFormControl-root {
+    width: 100%;
+  }
+}
+

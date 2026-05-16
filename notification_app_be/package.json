@@ -1,0 +1,19 @@
+{
+  "name": "notification_app_be",
+  "version": "1.0.0",
+  "description": "Backend API for notification prioritisation.",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node test/priority.test.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "logging_middleware": "file:../logging_middleware"
+  },
+  "devDependencies": {}
+}

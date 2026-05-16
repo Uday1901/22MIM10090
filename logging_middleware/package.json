@@ -1,0 +1,16 @@
+{
+  "name": "logging_middleware",
+  "version": "1.0.0",
+  "description": "Reusable logging middleware for backend and frontend applications.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node test/log.test.js"
+  },
+  "keywords": [
+    "logging",
+    "middleware"
+  ],
+  "license": "UNLICENSED"
+}
+
